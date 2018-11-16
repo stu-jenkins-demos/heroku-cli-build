@@ -39,7 +39,7 @@ spec:
                     //sh 'docker version'
                     dockerLogin()
                     sh 'docker build -t stuartcbrown/heroku-cli:latest .'
-                    dockerLogin()
+                    sh 'docker push stuartcbrown/heroku-cli:latest'
                     
                     
                     //put stuff here 
