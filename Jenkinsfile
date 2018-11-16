@@ -34,7 +34,7 @@ spec:
                 container('docker') {
                     
                     sh 'docker version'
-                    sh 'docker build -t stuartcbrown/heroku-cli:latest .
+                    sh 'docker build -t stuartcbrown/heroku-cli:latest .'
                     
                     //put stuff here 
                 }
