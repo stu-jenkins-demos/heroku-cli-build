@@ -32,13 +32,34 @@ spec:
         }
     }
     stages {
-        stage('build and push heroku image ') {
+        stage('build heroku image ') {
             steps {
                 container('docker') {
                     
                     //sh 'docker version'
                     dockerLogin()
-                    sh 'docker build -t stuartcbrown/heroku-cli:latest .'
+                   
+                }
+            }
+        }
+        stage('login to docker ') {
+            steps {
+                container('docker') {
+                    
+                    //sh 'docker version'
+                    dockerLogin()
+                   
+                    
+                    //put stuff here 
+                }
+            }
+        }
+        stage('push heroku image to docker hub ') {
+            steps {
+                container('docker') {
+                    
+                    //sh 'docker version'
+                   
                     sh 'docker push stuartcbrown/heroku-cli:latest'
                     
                     
