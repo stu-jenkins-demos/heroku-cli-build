@@ -36,7 +36,8 @@ spec:
             steps {
                 container('docker') {
                     
-                    sh 'docker version'
+                    //sh 'docker version'
+                    dockerLogin()
                     sh 'docker build -t stuartcbrown/heroku-cli:latest .'
                     dockerLogin()
                     
