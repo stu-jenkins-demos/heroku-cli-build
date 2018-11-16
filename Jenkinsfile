@@ -35,6 +35,7 @@ spec:
                     
                     sh 'docker version'
                     sh 'docker build -t stuartcbrown/heroku-cli:latest .'
+                    dockerLogin()
                     
                     
                     //put stuff here 
