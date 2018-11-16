@@ -29,12 +29,13 @@ spec:
         }
     }
     stages {
-        stage('docker') {
+        stage('build and push heroku image ') {
             steps {
                 container('docker') {
                     
                     sh 'docker version'
                     sh 'docker build -t stuartcbrown/heroku-cli:latest .'
+                    
                     
                     //put stuff here 
                 }
